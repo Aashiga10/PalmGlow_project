@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.landing{
+    background: linear-gradient(to bottom, black, maroon);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head ul{
+    display:flex;
+    /* justify-content: space-evenly; */
+    font-size: 22px;
+    font-style: italic;
+    padding:5% 0px 44px 8px;
+    /* padding-left: 41%; */
+} 
+/* .navbar-nav me-auto mb-2 mb-lg-0 li a {
+    color: goldenrod;
+} */
+.head ul li{
+    list-style-type: none;
+    /* padding-left: 20%; */
+    
+    /* display: flex; */
+}
+.nav-btn {
+    text-decoration: none;
+    padding: 60px;  
+    color: goldenrod; 
+    font-weight: bolder;
+    border: none;
+}
+.nav ul li {
+    border: none;
+    outline: none;
+}
+.nav-btn:hover {
+    color: rgb(8, 109, 7);
+}
+ .section{
+    display: flex;
+}
+.background{
+    /* display: flex; */
+    /* background-image: url(./Images/background.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+.background img{
+    height: 100%;
+}
+.background p{
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 30px;
+    color: brown;
+    padding: 14% 5% 0% 5%;
+}
+.background .grid1{
+    display: grid;
+}
+.background p button{
+    margin-top: 20%;
+    padding: 10px;
+    color: rgb(224, 129, 13);
+    background-color: black;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    /* margin-right: 10px; */
+    padding-top: 30px;
+    background-color: maroon;
+    padding: 50px;
+}    
+h3{
+    font-size: 30px;
+}
+.about{
+    margin-right: 15%;
+}
+.links{
+    margin-right: 17%;
+}
+.links  ul li a{
+    text-decoration: none;  
+    font-weight: bolder;
+    color: black;
+    line-height: 3vh;
+    margin-top: 20px;
+}
+.help{
+    margin-right: 15%;
+}
+.help  ul li a{
+    text-decoration: none;  
+    font-weight: bolder;
+    color: black;
+    line-height: 3vh;
+    margin-top: 20px;
+    margin-right: 50%;
+}
+.discovery{
+    margin-right: 15%;
+}
+.discovery ul li a{
+    text-decoration: none;  
+    font-weight: bolder;
+    color: black;
+    line-height: 3vh;
+    margin-top: 20px;
+    margin-right: 20%;
+}
+ ul li a:hover {
+    color: rgb(8, 109, 7);
+}
+footer .footer-bar{
+    display: flex;
+}
