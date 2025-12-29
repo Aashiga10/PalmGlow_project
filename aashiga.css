@@ -291,6 +291,14 @@ container .my-5 h2{
   color: maroon;
 
 }
+.container_img {
+  /* background-image: url("./Images/hand.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  width: 0%;  
+}
 
 
 
