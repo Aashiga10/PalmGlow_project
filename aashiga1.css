@@ -121,37 +121,17 @@ body {
   margin-right: 12px;
   text-decoration: none;
 }
-.terms-heading {
-  border-left: 4px solid maroon;
-  padding-left: 12px;
-  font-weight: bold;
+.col-md-3 p a{
+    text-decoration: none;  
+    color:silver ;
+}
+.col-md-3 a:hover {
+    color: rgb(168, 176, 16);
 }
 
-h5 {
-  margin-top: 25px;
-  font-weight: 600;
-  color: maroon ;
+label{
+    color: maroon;
 }
-
-p {
-  line-height: 1.7;
-}
-.privacy-heading {
-  border-left: 4px solid maroon;
-  padding-left: 12px;
-  font-weight: bold;
-}
-
-h5 {
-  margin-top: 25px;
-  font-weight: 600;
-  color: maroon ;
-}
-
-p {
-  line-height: 1.7;
-}
-container .my-5 h2{
-  color: maroon;
-
+.bg-maroon {
+    background-color: maroon;
 }
