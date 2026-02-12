@@ -301,5 +301,61 @@ container .my-5 h2{
 } */
 
 
+.title {
+    color: #6F4E37;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.buttons {
+    margin: 20px;
+}
+
+.buttons button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #6F4E37;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    margin: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Services */
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+
 
 
