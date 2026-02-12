@@ -324,7 +324,7 @@ container .my-5 h2{
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 50px;
     padding: 40px;
 }
@@ -332,7 +332,8 @@ container .my-5 h2{
 .card {
     background: white;
     /* padding: 10px; */
-    border-radius: 12px;
+    border-radius: 15px;
+    overflow: hidden;   
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
