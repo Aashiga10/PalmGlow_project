@@ -11,3 +11,17 @@ function filterDesign(category) {
         }
     }
 }
+function calculatePrice() {
+
+    let design = parseInt(document.getElementById("design").value);
+    let length = parseInt(document.getElementById("length").value);
+    let glitter = document.getElementById("glitter");
+
+    let total = design + length;
+
+    if (glitter.checked) {
+        total += parseInt(glitter.value);
+    }
+
+    document.getElementById("total").innerText = total;
+}

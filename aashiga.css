@@ -366,7 +366,6 @@ body {
 /* .card {
     background: white;
     /* padding: 10px; 
-    border-radius: 15px;
     overflow: hidden;   
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
@@ -395,6 +394,38 @@ body {
     padding: 20px;
     background: white;
     border-radius: 10px;
+}
+.custom-box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.custom-box label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.custom-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.book-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: #6F4E37;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 
