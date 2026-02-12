@@ -111,7 +111,7 @@
   flex-wrap: wrap;
 }
 
-.card {
+.card{
   width: 260px;
   background: maroon;
   border-radius: 15px;
@@ -120,7 +120,7 @@
   text-align: center;
 }
 
-.card img {
+.card-im1 img {
   width: 90px;
   height: 90px;
   border-radius: 70%;
