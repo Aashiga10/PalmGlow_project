@@ -325,7 +325,7 @@ container .my-5 h2{
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 50px;
     padding: 40px;
 }
 
