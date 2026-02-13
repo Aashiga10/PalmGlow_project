@@ -168,3 +168,12 @@ label{
 .bg-maroon {
     background-color: maroon;
 }
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}

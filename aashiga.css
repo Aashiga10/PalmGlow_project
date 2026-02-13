@@ -314,6 +314,16 @@ label{
   margin-right: 12px;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
 .terms-heading {
   border-left: 4px solid maroon;
   padding-left: 12px;
