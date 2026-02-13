@@ -349,7 +349,12 @@ p {
 container .my-5 h2{
   color: maroon;
 }
-
+.title a {
+    text-align: center;
+     margin: 40px 0;
+    text-decoration: none;
+color: #555;
+}
 .custom-box {
     width: 400px;
     margin: 50px auto;
