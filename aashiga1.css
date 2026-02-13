@@ -64,7 +64,48 @@
 }
 
 /* Buttons */
-.buttons {
+/* Button container spacing */
+.btn-group {
+  justify-content: center;
+}
+
+/* Common button style */
+.btn-group .btn {
+  border-radius: 25px !important;
+  padding: 10px 18px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Gold buttons */
+.btn-warning {
+  background-color: #3f3e3c !important;
+  border: none;
+  color: goldenrod;
+}
+
+/* Hover effect */
+.btn-warning:hover {
+  background-color: maroon !important;
+  transform: scale(1.05);
+}
+
+/* Active click */
+.btn-warning:active {
+  transform: scale(0.95);
+}
+
+/* "All" button (dark style) */
+.btn-dark {
+  border-radius: 25px !important;
+}
+
+.btn-dark:hover {
+  background-color: #333 !important;
+  transform: scale(1.05);
+}
+
+/* .buttons {
     margin: 20px;
 }
 
@@ -80,31 +121,53 @@
 
 body {
     background: #f2f2f2;
-}
+} */
 
 /* GALLERY GRID */
-.gallery {
+/* Card styling */
+.design-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Image styling */
+.design-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Hover effect */
+.design-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 images per row */
+    grid-template-columns: repeat(3, 1fr);  /* 3 images per row *
     gap: 40px;
     padding: 50px;
     justify-items: center;
 }
 
-/* CARD DESIGN */
+/* CARD DESIGN 
 .card {
     width: 300px;
-    height: 350px;   /* Proper height like 2nd pic */
+    height: 350px;   /* Proper height like 2nd pic *
     border: 2px solid #8B0000;
     overflow: hidden;
     background: white;
 }
 
-/* IMAGE FITTING */
+/* IMAGE FITTING *
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: fill;   /* THIS IS THE MAGIC LINE */
+    object-fit: fill;   /* THIS IS THE MAGIC LINE *
 }
 
 .container .gallery{
@@ -112,9 +175,53 @@ body {
     justify-content: space-evenly;
     margin: 30px 0px;
     
-}
+} */
+
 /* Services */
-.services {
+/* SERVICES SECTION */
+.services-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+/* Card styling */
+.services-section .card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Shadow + hover effect */
+.services-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Card body */
+.services-section .card-body {
+  padding: 25px;
+}
+
+/* Title */
+.services-section h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.services-section h4 {
+  color: #d4af37; /* gold */
+  font-weight: bold;
+}
+
+/* Description */
+.services-section p {
+  color: #555;
+  font-size: 14px;
+}
+
+
+/* .services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -126,7 +233,7 @@ body {
     padding: 20px;
     background: white;
     border-radius: 10px;
-}
+} */
  .footer-bar {
   border-top: 3px solid maroon;
   padding: 15px 30px;
@@ -168,12 +275,79 @@ label{
 .bg-maroon {
     background-color: maroon;
 }
+
 @media (max-width: 768px) {
-  .logo a {
-    font-size: 24px;
+
+  /* Reduce header padding */
+  .header {
+    padding: 10px 15px;
   }
 
-  .nav-link {
+  /* Stack logo and navbar */
+  .header .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logo resize */
+  .logo a {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Navbar full width */
+  .navbar {
+    width: 100%;
+  }
+
+  /* Center nav items */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Space between menu items */
+  .navbar .nav-link {
     margin: 10px 0;
+  }
+
+  /* Center toggle button */
+  .navbar-toggler {
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Stack footer sections */
+  .footer .row {
+    text-align: center;
+  }
+
+  /* Add spacing between columns */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+
+  /* Center footer text */
+  .footer p {
+    text-align: center;
+  }
+
+  /* Social icons center */
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  /* Reduce padding */
+  .footer {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .design-card img {
+    height: 200px;
   }
 }
