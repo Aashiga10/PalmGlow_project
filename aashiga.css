@@ -315,15 +315,7 @@ label{
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .logo a {
-    font-size: 24px;
-  }
 
-  .nav-link {
-    margin: 10px 0;
-  }
-}
 .terms-heading {
   border-left: 4px solid maroon;
   padding-left: 12px;
@@ -356,45 +348,7 @@ p {
 }
 container .my-5 h2{
   color: maroon;
-
 }
-/* .container_img {
-  background-image: url("./Images/hand.jpg"); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh; 
-  width: 40%;  
-} */
-
-
-
-/* Gallery */
-/* .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 50px;
-    padding: 40px;
-} */
-
-/* .card {
-    background: white;
-    /* padding: 10px; 
-    overflow: hidden;   
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card img {
-    width: 100%;
-    height: fit-content;
-    border-radius: 10px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-*/
 
 .custom-box {
     width: 400px;
@@ -427,6 +381,76 @@ container .my-5 h2{
     border: none;
     border-radius: 25px;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  /* Reduce header padding */
+  .header {
+    padding: 10px 15px;
+  }
+
+  /* Stack logo and navbar */
+  .header .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logo resize */
+  .logo a {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Navbar full width */
+  .navbar {
+    width: 100%;
+  }
+
+  /* Center nav items */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Space between menu items */
+  .navbar .nav-link {
+    margin: 10px 0;
+  }
+
+  /* Center toggle button */
+  .navbar-toggler {
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Stack footer sections */
+  .footer .row {
+    text-align: center;
+  }
+
+  /* Add spacing between columns */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+
+  /* Center footer text */
+  .footer p {
+    text-align: center;
+  }
+
+  /* Social icons center */
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  /* Reduce padding */
+  .footer {
+    padding: 20px 10px;
+  }
 }
 
 
