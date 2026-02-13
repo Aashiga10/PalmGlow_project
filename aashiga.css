@@ -35,9 +35,14 @@
 
 .logo a{
     color: goldenrod;
+    text-decoration: none;
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     margin: 0;
+}
+
+.logo i {
+  color: goldenrod; /* icon also gold */
 }
 
 
