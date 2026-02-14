@@ -160,8 +160,7 @@ h4 {
   display: flex;
    background: linear-gradient(to top, black, maroon);
    justify-content:space-between;/* icons left, text right */
-
-  align-items: center;
+   align-items: center;
 }
 
 .footer-text {
