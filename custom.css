@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to bottom, black, maroon);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo a{
+    color: goldenrod;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.logo i {
+  color: goldenrod; /* icon also gold */
+}
+
+.nav-btn {
+    color: goldenrod!important;
+    font-weight: 500;
+    font-size: large;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: green !important;
+}
+
+
+.title {
+    color: #6F4E37;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.btn-warning {
+    background-color: #8b1e3f; /* maroon */
+    border: none;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #a52a2a;
+}
+
+.btn-outline-warning {
+    border-color: #8b1e3f;
+    color: #8b1e3f;
+}
+
+.btn-outline-warning:hover {
+    background-color: #8b1e3f;
+    color: white;
+}
+
+/*Customized */
+/* .custom-box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.custom-box label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.custom-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.book-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: #6F4E37;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+} */
+ /* Customized Section Card */
+.card {
+    max-width: 500px; /* replaces width:400px */
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5a0f0f;
+}
+
+/* Dropdown (Select) */
+.form-select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+.form-select:focus {
+    border-color: goldenrod;
+    box-shadow: 0 0 5px rgba(218,165,32,0.5);
+}
+
+/* Checkbox */
+.form-check-input {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Price text */
+h4 {
+    color: maroon;
+    font-weight: bold;
+}
+
+/* Button (override Bootstrap) */
+.btn-dark {
+    background: #6F4E37;
+    border: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.btn-dark:hover {
+    background: maroon;
+    color: white;
+}
+
+ .footer-bar {
+  border-top: 3px solid maroon;
+  padding: 15px 30px;
+  ;
+}
+
+.footer-flex {
+  display: flex;
+   background: linear-gradient(to top, black, maroon);
+   justify-content:space-between;/* icons left, text right */
+
+  align-items: center;
+}
+
+.footer-text {
+    color:goldenrod;
+  margin: 50px;
+  padding-right: 20px;
+  font-weight: 500;
+}
+
+.social-icons a {
+  color: goldenrod;
+  font-size: 18px;
+  margin-right: 12px;
+  text-decoration: none;
+}
+.col-md-3 p a{
+    text-decoration: none;  
+    color:silver ;
+}
+.col-md-3 a:hover {
+    color: rgb(168, 176, 16);
+}
+
+label{
+    color: maroon;
+}
+.bg-maroon {
+    background-color: maroon;
+}
+
+@media (max-width: 768px) {
+
+  /* Reduce header padding */
+  .header {
+    padding: 10px 15px;
+  }
+
+  /* Stack logo and navbar */
+  .header .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logo resize */
+  .logo a {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Navbar full width */
+  .navbar {
+    width: 100%;
+  }
+
+  /* Center nav items */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Space between menu items */
+  .navbar .nav-link {
+    margin: 10px 0;
+  }
+
+  /* Center toggle button */
+  .navbar-toggler {
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Stack footer sections */
+  .footer .row {
+    text-align: center;
+  }
+
+  /* Add spacing between columns */
+  .footer .col-md-3 {
+    margin-bottom: 20px;
+  }
+
+  /* Center footer text */
+  .footer p {
+    text-align: center;
+  }
+
+  /* Social icons center */
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  /* Reduce padding */
+  .footer {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .design-card img {
+    height: 200px;
+  }
+}
