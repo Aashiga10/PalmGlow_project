@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,153 +10,159 @@
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
-     <!-- Header -->
-      <header class="header">
-    <div class="container-fluid">
-        <div class="d-flex justify-content-between align-items-center py-3">
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center py-3">
 
-            <!-- Logo -->
-            <h1 class="logo">
-            <a href="index.html">
-               <i class="fa-brands fa-sketch"></i> Palm Glow
-            </a>
-            </h1>
+                <!-- Logo -->
+                <h1 class="logo">
+                    <a href="index.html">
+                        <i class="fa-brands fa-sketch"></i> Palm Glow
+                    </a>
+                </h1>
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg p-0">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-btn" href="index.html">
-                                <i class="fa-solid fa-house"></i> Home
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="index.html">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-btn" href="design.html">
-                                <i class="fa-solid fa-bezier-curve"></i> Designs
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="design.html">
+                                    <i class="fa-solid fa-bezier-curve"></i> Designs
+                                </a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-btn" href="about.html">
-                                <i class="fa-solid fa-circle-info"></i> About
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="about.html">
+                                    <i class="fa-solid fa-circle-info"></i> About
+                                </a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-btn" href="contact.html">
-                                <i class="fa-solid fa-user"></i> Contact
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="contact.html">
+                                    <i class="fa-solid fa-user"></i> Contact
+                                </a>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <br><br>
+    <!-- End Header -->
+    <!-- Customized -->
+    <h1 class="title"><a href="" style="text-decoration: none; color: maroon;"><i
+                class="fa-brands fa-pagelines"></i>Customize Your Mehendi </a></h1>
+    <div class="custom-box">
+
+        <!-- Design Type -->
+        <label>Choose Design Type:</label>
+        <select id="design" onchange="calculatePrice()">
+            <option value="0">Select</option>
+            <option value="5000">Bridal</option>
+            <option value="2000">Arabic</option>
+            <option value="1500">Traditional</option>
+            <option value="2500">Indo-Arabic</option>
+        </select>
+
+        <!-- Hand Length -->
+        <label>Hand Coverage:</label>
+        <select id="length" onchange="calculatePrice()">
+            <option value="0">Select</option>
+            <option value="1000">Full Hand</option>
+            <option value="500">Half Hand</option>
+            <option value="300">Palm Only</option>
+        </select>
+
+        <!-- Add-ons -->
+        <label>Add Extra Glitter:</label>
+        <input type="checkbox" id="glitter" value="300" onchange="calculatePrice()"> ₹300
+
+        <br><br>
+
+        <h2>Total Price: ₹ <span id="total">0</span></h2>
+
+        <!-- <button class="book-btn"><a href="customized.html" style="text-decoration: none;color: rgb(225, 191, 191);">Book Now</a></button> -->
+        <button class="book-btn" onclick="location.href='customized.html'">
+            Book Now
+        </button>
+
+    </div>
+
+    <!-- end customized -->
+    <!-- Footer -->
+    <footer class="bg-maroon text-white">
+        <div class="container-fluid px-5 py-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="text-warning">Mehandi</h4>
+                    <p style="font-size: 900;">Beautiful, natural Mehandi <br>for brides, festivals,<br> and
+                        unforgettable
+                        moments.</p>
                 </div>
-            </nav>
+                <div class="col-md-3">
+                    <h4 class="text-warning">Site Links</h4>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="design.html">Designs</a></p>
+                    <p><a href="customized.html">Customized</a></p>
+                </div>
 
-        </div>
-    </div>
-</header>
-    <br><br>
-     <!-- End Header -->
-     <!-- Customized -->
-<h1 class="title"><a href="" style="text-decoration: none; color: maroon;"><i class="fa-brands fa-pagelines"></i>Customize Your Mehendi </a></h1>
-<div class="custom-box">
+                <div class="col-md-3">
+                    <h4 class="text-warning">Informations & Help</h4>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                    <p><a href="terms.html">Terms&Conditions</a></p>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                </div>
 
-    <!-- Design Type -->
-    <label>Choose Design Type:</label>
-    <select id="design" onchange="calculatePrice()">
-        <option value="0">Select</option>
-        <option value="5000">Bridal</option>
-        <option value="2000">Arabic</option>
-        <option value="1500">Traditional</option>
-        <option value="2500">Indo-Arabic</option>
-    </select>
-
-    <!-- Hand Length -->
-    <label>Hand Coverage:</label>
-    <select id="length" onchange="calculatePrice()">
-        <option value="0">Select</option>
-        <option value="1000">Full Hand</option>
-        <option value="500">Half Hand</option>
-        <option value="300">Palm Only</option>
-    </select>
-
-    <!-- Add-ons -->
-    <label>Add Extra Glitter:</label>
-    <input type="checkbox" id="glitter" value="300" onchange="calculatePrice()" > ₹300
-
-    <br><br>
-
-    <h2>Total Price: ₹ <span id="total">0</span></h2>
-
-    <!-- <button class="book-btn"><a href="customized.html" style="text-decoration: none;color: rgb(225, 191, 191);">Book Now</a></button> -->
-     <button class="book-btn" onclick="location.href='customized.html'">
-    Book Now
-    </button>
-
-</div>
-
-<!-- end customized -->
-      <!-- Footer -->
-       <footer class="bg-maroon text-white">
-    <div class="container-fluid px-5 py-5">
-        <div class="row">
-         <div class="col-md-3">
-                <h4 class="text-warning">Mehandi</h4>
-                <p style="font-size: 900;">Beautiful, natural Mehandi <br>for brides, festivals,<br> and unforgettable
-                    moments.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 class="text-warning">Site Links</h4>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="design.html">Designs</a></p>
-                <p><a href="customized.html">Customized</a></p>
-            </div>
-
-            <div class="col-md-3">
-                <h4 class="text-warning">Informations & Help</h4>
-                <p><a href="about.html">About</a></p>
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="terms.html">Terms&Conditions</a></p>
-                <p><a href="privacy.html">Privacy Policy</a></p>
-            </div>
-
-            <div class="col-md-3">
-                <h4 class="text-warning">Discover</h4>
-                <p><a href="discover.html">Latest</a></p>
-                <p><a href="discover.html">Popular</a></p>
-                <p><a href="discover.html">Trending</a></p>
+                <div class="col-md-3">
+                    <h4 class="text-warning">Discover</h4>
+                    <p><a href="discover.html">Latest</a></p>
+                    <p><a href="discover.html">Popular</a></p>
+                    <p><a href="discover.html">Trending</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-       <!-- End Footer -->
-        <div class="footer-flex">
+    </footer>
+    <!-- End Footer -->
+    <div class="footer-flex">
         <h6 class="footer-text">
-        Copyright © 2025 Palm Glow
-      </h6>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/aashi_mehandi_arts/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href= "https://www.youtube.com/feed/you">
-          <i class="fa-brands fa-youtube"></i>
+            Copyright © 2025 Palm Glow
+        </h6>
+        <div class="social-icons">
+            <a href="https://instagram.com/aashi_mehandi_arts" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <a href="https://www.youtube.com/feed/you">
+            <i class="fa-brands fa-youtube"></i>
         </a>
         <a href="https://www.facebook.com/profile.php?id=61570065820060">
-          <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook-f"></i>
         </a>
-      </div>
+    </div>
     </div>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </body>
+
 </html>
