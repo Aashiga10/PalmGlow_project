@@ -67,12 +67,69 @@
     </header>
     <br><br>
     <!-- End Header -->
-    <!-- Customized -->
-    <h1 class="title"><a href="" style="text-decoration: none; color: maroon;"><i
-                class="fa-brands fa-pagelines"></i>Customize Your Mehendi </a></h1>
-    <div class="custom-box">
+
+<!-- Customized Section -->
+<div class="container my-5">
+
+    <h1 class="text-center mb-4" style="color: maroon;">
+        <i class="fa-brands fa-pagelines"></i> Customize Your Mehendi
+    </h1>
+
+    <div class="card shadow p-4">
 
         <!-- Design Type -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Choose Design Type:</label>
+            <select class="form-select" id="design" onchange="calculatePrice()">
+                <option value="0">Select</option>
+                <option value="5000">Bridal</option>
+                <option value="2000">Arabic</option>
+                <option value="1500">Traditional</option>
+                <option value="2500">Indo-Arabic</option>
+            </select>
+        </div>
+
+        <!-- Hand Coverage -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Hand Coverage:</label>
+            <select class="form-select" id="length" onchange="calculatePrice()">
+                <option value="0">Select</option>
+                <option value="1000">Full Hand</option>
+                <option value="500">Half Hand</option>
+                <option value="300">Palm Only</option>
+            </select>
+        </div>
+
+        <!-- Add-ons -->
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="glitter" value="300" onchange="calculatePrice()">
+            <label class="form-check-label fw-bold">
+                Add Extra Glitter (₹300)
+            </label>
+        </div>
+
+        <!-- Price -->
+        <h4 class="text-center mb-4">
+            Total Price: ₹ <span id="total">0</span>
+        </h4>
+
+        <!-- Button -->
+        <div class="text-center">
+            <button class="btn btn-dark px-4 py-2" onclick="location.href='customized.html'">
+                Book Now
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- Customized
+    <h1 class="title"><a href="" style="text-decoration: none; color: maroon;"><i
+                class="fa-brands fa-pagelines"></i>Customize Your Mehendi </a></h1>
+    <div class="custom-box"> -->
+
+        <!-- Design Type --
         <label>Choose Design Type:</label>
         <select id="design" onchange="calculatePrice()">
             <option value="0">Select</option>
@@ -82,7 +139,7 @@
             <option value="2500">Indo-Arabic</option>
         </select>
 
-        <!-- Hand Length -->
+        <!-- Hand Length --
         <label>Hand Coverage:</label>
         <select id="length" onchange="calculatePrice()">
             <option value="0">Select</option>
@@ -91,7 +148,7 @@
             <option value="300">Palm Only</option>
         </select>
 
-        <!-- Add-ons -->
+        <!-- Add-ons --
         <label>Add Extra Glitter:</label>
         <input type="checkbox" id="glitter" value="300" onchange="calculatePrice()"> ₹300
 
@@ -100,11 +157,12 @@
         <h2>Total Price: ₹ <span id="total">0</span></h2>
 
         <!-- <button class="book-btn"><a href="customized.html" style="text-decoration: none;color: rgb(225, 191, 191);">Book Now</a></button> -->
-        <button class="book-btn" onclick="location.href='customized.html'">
+        <!-- <button class="book-btn" onclick="location.href='customized.html'">
             Book Now
         </button>
 
-    </div>
+    </div> -->
+
 
     <!-- end customized -->
     <!-- Footer -->
