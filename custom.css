@@ -233,37 +233,40 @@ label{
     margin: 10px auto;
   }
 }
-@media (max-width: 768px) {
+/* 🔽 MEDIA QUERY FOR MOBILE */
+@media (max-width: 576px) {
 
-  /* Stack footer sections */
-  .footer .row {
-    text-align: center;
-  }
+    /* Stack footer columns */
+    .container-fluid .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-  /* Add spacing between columns */
-  .footer .col-md-3 {
-    margin-bottom: 20px;
-  }
+    /* Adjust headings */
+    .container-fluid h4 {
+        font-size: 18px;
+    }
 
-  /* Center footer text */
-  .footer p {
-    text-align: center;
-  }
+    /* Adjust paragraph text */
+    .container-fluid p {
+        font-size: 14px;
+    }
 
-  /* Social icons center */
-  .social-icons {
-    justify-content: center;
-    display: flex;
-    margin-top: 10px;
-  }
+    /* Footer bottom section */
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
 
-  /* Reduce padding */
-  .footer {
-    padding: 20px 10px;
-  }
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+        font-size: 20px;
+    }
 }
-@media (max-width: 768px) {
-  .design-card img {
-    height: 200px;
-  }
-}
+
