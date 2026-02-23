@@ -22,6 +22,6 @@ function calculatePrice() {
     if (glitter.checked) {
         total += parseInt(glitter.value);
     }
-
+    document.getElementById("totalInput").value = total;
     document.getElementById("total").innerText = total;
 }
