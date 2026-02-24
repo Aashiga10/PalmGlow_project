@@ -1,12 +1,42 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request 
 
 app = Flask(__name__)
 
-# Home → Customized Page
+
 @app.route('/')
 def home():
+    return render_template('index.html')
+
+@app.route('/design')
+def design():
+    return render_template('design.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/customized')
+def customized():
     return render_template('customized.html')
 
+@app.route('/discover')
+def discover():
+    return render_template('discover.html')
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 # Booking from customized page
 @app.route('/book', methods=['POST'])
@@ -71,5 +101,3 @@ def contact_submit():
 
     return f"Thank you {name}, your message has been sent!"
 
-if __name__ == '__main__':
-    app.run(debug=True)

@@ -54,7 +54,7 @@
 
             <!-- Logo -->
             <h1 class="logo">
-            <a href="index.html">
+            <a href="{{ url_for('home') }}">Home</a>
                <i class="fa-brands fa-sketch"></i> Palm Glow
             </a>
             </h1>
@@ -70,25 +70,25 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link nav-btn" href="index.html">
+                            <a class="nav-link nav-btn" href="{{ url_for('home') }}">
                                 <i class="fa-solid fa-house"></i> Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link nav-btn" href="design.html">
+                            <a class="nav-link nav-btn" href="{{ url_for('design') }}">
                                 <i class="fa-solid fa-bezier-curve"></i> Designs
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link nav-btn" href="about.html">
+                            <a class="nav-link nav-btn" href="{{ url_for('about') }}">
                                 <i class="fa-solid fa-circle-info"></i> About
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link nav-btn" href="contact.html">
+                            <a class="nav-link nav-btn" href="{{ url_for('contact') }}">
                                 <i class="fa-solid fa-user"></i> Contact
                             </a>
                         </li>
@@ -162,19 +162,19 @@
           <div class="carousel-inner rounded shadow">
 
             <div class="carousel-item active" data-bs-interval="3000">
-              <img src="./Images/Mehandi.jpg" class="d-block w-100" alt="">
+              <img src="{{ url_for('static', filename='Images/Mehandi.jpg') }}" class="d-block w-100" alt="">
             </div>
 
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="./Images/Mehandi5.png" class="d-block w-100" alt="">
+              <img src="{{ url_for('static', filename='Images/Mehandi5.png') }}" class="d-block w-100" alt="">
             </div>
 
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="./Images/Mehandi4.png" class="d-block w-100" alt="">
+              <img src="{{ url_for('static', filename='Images/Mehandi4.png') }}" class="d-block w-100" alt="">
             </div>
 
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="./Images/leg.png" class="d-block w-100" alt="">
+              <img src="{{ url_for('static', filename='Images/leg.png') }}" class="d-block w-100" alt="">
             </div>
 
           </div>
@@ -201,8 +201,8 @@
         </p>
 
         <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-          <a href="book.html" class="btn btn-warning px-4 py-2">PROCEED BOOKING</a>
-          <a href="design.html" class="btn btn-outline-warning px-4 py-2">VIEW DESIGNS</a>
+          <a href="{{ url_for('booking') }}" class="btn btn-warning px-4 py-2">PROCEED BOOKING</a>
+          <a href="{{ url_for('design') }}" class="btn btn-outline-warning px-4 py-2">VIEW DESIGNS</a>
         </div>
       </div>
 
@@ -349,24 +349,24 @@
             </div>
             <div class="col-md-3">
                 <h4 class="text-warning">Site Links</h4>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="design.html">Designs</a></p>
-                <p><a href="customized.html">Customized</a></p>
+                <p><a href="{{ url_for('home') }}">Home</a></p>
+                <p><a href="{{ url_for('design') }}">Designs</a></p>
+                <p><a href="{{ url_for('customized') }}">Customized</a></p>
             </div>
 
             <div class="col-md-3">
                 <h4 class="text-warning">Informations & Help</h4>
-                <p><a href="about.html">About</a></p>
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="terms.html">Terms&Conditions</a></p>
-                <p><a href="privacy.html">Privacy Policy</a></p>
+                <p><a href="{{ url_for('about') }}">About</a></p>
+                <p><a href="{{ url_for('contact') }}">Contact</a></p>
+                <p><a href="{{ url_for('terms') }}">Terms&Conditions</a></p>
+                <p><a href="{{ url_for('privacy') }}">Privacy Policy</a></p>
             </div>
 
             <div class="col-md-3">
                 <h4 class="text-warning">Discover</h4>
-                <p><a href="discover.html">Latest</a></p>
-                <p><a href="discover.html">Popular</a></p>
-                <p><a href="discover.html">Trending</a></p>
+                <p><a href="{{ url_for('discover') }}">Latest</a></p>
+                <p><a href="{{ url_for('discover') }}">Popular</a></p>
+                <p><a href="{{ url_for('discover') }}">Trending</a></p>
             </div>
         </div>
     </div>
