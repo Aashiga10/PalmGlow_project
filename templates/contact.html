@@ -65,11 +65,10 @@
 </header>
     <br><br>
      <!-- End Header -->
-
 <div class="container mt-5">
 
   <!-- Heading -->
-  <h2 class="contact-heading">Contact Us</h2>
+  <h2 class="contact-heading text-center">Contact Us</h2>
 
   <div class="row mt-4">
 
@@ -85,6 +84,42 @@
 
     <!-- Contact Form -->
     <div class="col-md-7">
+      <form action="/contact_submit" method="POST" class="contact-form">
+
+        <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+
+        <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+
+        <input type="text" name="subject" class="form-control mb-3" placeholder="Subject" required>
+
+        <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn btn-dark">Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- <div class="container mt-5">
+
+  <!-- Heading --
+  <h2 class="contact-heading">Contact Us</h2>
+
+  <div class="row mt-4">
+
+    <!-- Contact Info --
+    <div class="col-md-5 contact-info">
+      <h5 style="color: goldenrod;">Get in Touch</h5>
+      <p>We’d love to hear from you. Reach us anytime! Welcome...</p><br>
+
+      <p>📍 Location: Madurai, India.</p>
+      <p>📞 Phone: +91 9047707580</p>
+      <p>✉️ Email: aashiga10806@gmail.com</p>
+    </div>
+
+    <!-- Contact Form --
+    <div class="col-md-7">
       <form class="contact-form">
         <input type="text" class="form-control mb-3" placeholder="Your Name" required>
         <input type="email" class="form-control mb-3" placeholder="Your Email" required>
@@ -95,7 +130,7 @@
     </div>
 
   </div>
-</div>
+</div> -->
 <br><br><br>
 
       <!-- Footer -->

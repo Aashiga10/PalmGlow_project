@@ -22,32 +22,54 @@ def book():
                            glitter=glitter,
                            total=total)
 
-
-# Final booking submit
 @app.route('/confirm', methods=['POST'])
 def confirm():
     name = request.form.get('name')
     phone = request.form.get('phone')
+    email = request.form.get('email')
+    address = request.form.get('address')
     date = request.form.get('date')
+    time = request.form.get('time')
+    design = request.form.get('design')
+    event = request.form.getlist('event')  # for checkboxes
 
-    return render_template('success.html', name=name)
+    return f"Thank you {name}, your booking is confirmed!"
+
+# Final booking submit
+# @app.route('/confirm', methods=['POST'])
+# def confirm():
+#     name = request.form.get('name')
+#     phone = request.form.get('phone')
+#     date = request.form.get('date')
+
+    # return render_template('success.html', name=name)
 
 
 # Contact page
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
+# @app.route('/contact')
+# def contact():
+#     return render_template('contact.html')
 
 
-# Contact form submit
+# # Contact form submit
+# @app.route('/contact_submit', methods=['POST'])
+# def contact_submit():
+#     name = request.form.get('name')
+#     message = request.form.get('message')
+
+#     return f"Thank you {name}, we received your message!"
+
 @app.route('/contact_submit', methods=['POST'])
 def contact_submit():
     name = request.form.get('name')
+    email = request.form.get('email')
+    subject = request.form.get('subject')
     message = request.form.get('message')
 
-    return f"Thank you {name}, we received your message!"
+    print("New Contact Message:")
+    print(name, email, subject, message)
 
-
+    return f"Thank you {name}, your message has been sent!"
 
 if __name__ == '__main__':
     app.run(debug=True)
