@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="aash.css">
+    <!-- <link rel="stylesheet" href="aash.css"> -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='aash.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -21,16 +22,19 @@
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="./Images/Mehandi.jpg" class="d-block w-100" alt="">
+                        <img src="{{ url_for('static', filename='Images/Mehandi.jpg') }}" class="d-block w-100" alt="">
+                        <!-- <img src="./Images/Mehandi.jpg" class="d-block w-100" alt=""> -->
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./Images/Mehandi5.png" class="d-block w-100" alt="">
+                        <img src="{{ url_for('static', filename='Images/Mehandi5.png') }}" class="d-block w-100" alt="">
+                        <!-- <img src="./Images/Mehandi5.png" class="d-block w-100" alt=""> -->
                     </div>
                     <div class="carousel-item">
-                        <img src="./Images/Mehandi4.png" class="d-block w-100" alt="">
+                        <img src="{{ url_for('static', filename='Images/Mehandi4.png') }}" class="d-block w-100" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Images/leg.png" class="d-block w-100" alt="">
+                        <img src="{{ url_for('static', filename='Images/leg.png') }}" class="d-block w-100" alt="">
+                        
                     </div>
                 </div>
 
@@ -87,7 +91,8 @@
 
         <div class="col-md-4">
             <div class="card h-100 text-center">
-                <img src="Images/hennapowder.png.png" class="card-img-top" alt="">
+                
+                <img src="{{ url_for('static', filename='Images/hennapowder.png.png') }}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h3>Henna Powder</h3>
                     <p>The mehndi mixture is made from a ground paste or powder from the leaves of the henna plant.
@@ -100,7 +105,7 @@
 
         <div class="col-md-4">
             <div class="card h-100 text-center">
-                <img src="Images/eucalyptus.png.png" class="card-img-top" alt="">
+                <img src="{{ url_for('static', filename='Images/eucalyptus.png.png') }}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h3>Eucalyptus Oil</h3>
                     <p>Hennahub Pure Eucalyptus Essential Oil is extracted through advanced steam distillation from freshly
@@ -113,7 +118,7 @@
 
         <div class="col-md-4">
             <div class="card h-100 text-center">
-                <img src=".//Images/teatreeoil.png" class="card-img-top" alt="">
+                <img src="{{ url_for('static', filename='Images/teatreeoil.png') }}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h3>Tree Tree Oil</h3>
                     <p>Tea tree oil is a popular addition to mehndi (henna) paste to achieve a darker, richer stain by
