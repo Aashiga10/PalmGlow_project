@@ -28,7 +28,7 @@ def discover():
     return render_template('discover.html')
 
 @app.route('/book')
-def discover():
+def book():
     return render_template('book.html')
 
 @app.route('/terms')
