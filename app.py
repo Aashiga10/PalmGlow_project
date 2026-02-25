@@ -27,7 +27,7 @@ def customized():
 def discover():
     return render_template('discover.html')
 
-@app.route('/booking')
+@app.route('/book')
 def discover():
     return render_template('book.html')
 
