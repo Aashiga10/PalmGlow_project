@@ -1,6 +1,39 @@
 from flask import Flask, render_template, request 
+import sqlite3
 
 app = Flask(__name__)
+
+def init_db():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    # Booking table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS bookings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            design TEXT,
+            length TEXT,
+            glitter TEXT,
+            total TEXT
+        )
+    ''')
+
+    # Contact table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS contacts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            email TEXT,
+            message TEXT
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def init_db():
+    init_db()
+ 
 
 
 @app.route('/')
@@ -28,7 +61,7 @@ def discover():
     return render_template('discover.html')
 
 @app.route('/book')
-def book():
+def booking():
     return render_template('book.html')
 
 @app.route('/terms')
@@ -39,16 +72,40 @@ def terms():
 def privacy():
     return render_template('privacy.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
 
 # Booking from customized page
+# @app.route('/book', methods=['POST'])
+# def book():
+#     design = request.form.get('design')
+#     length = request.form.get('length')
+#     glitter = request.form.get('glitter')
+#     total = request.form.get('total')
+
+#     return render_template('book.html',
+#                            design=design,
+#                            length=length,
+#                            glitter=glitter,
+#                            total=total)
+
+
 @app.route('/book', methods=['POST'])
 def book():
     design = request.form.get('design')
     length = request.form.get('length')
     glitter = request.form.get('glitter')
     total = request.form.get('total')
+
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        INSERT INTO bookings (design, length, glitter, total)
+        VALUES (?, ?, ?, ?)
+    ''', (design, length, glitter, total))
+
+    conn.commit()
+    conn.close()
 
     return render_template('book.html',
                            design=design,
@@ -69,30 +126,6 @@ def confirm():
 
     return f"Thank you {name}, your booking is confirmed!"
 
-# Final booking submit
-# @app.route('/confirm', methods=['POST'])
-# def confirm():
-#     name = request.form.get('name')
-#     phone = request.form.get('phone')
-#     date = request.form.get('date')
-
-    # return render_template('success.html', name=name)
-
-
-# Contact page
-# @app.route('/contact')
-# def contact():
-#     return render_template('contact.html')
-
-
-# # Contact form submit
-# @app.route('/contact_submit', methods=['POST'])
-# def contact_submit():
-#     name = request.form.get('name')
-#     message = request.form.get('message')
-
-#     return f"Thank you {name}, we received your message!"
-
 @app.route('/contact_submit', methods=['POST'])
 def contact_submit():
     name = request.form.get('name')
@@ -100,8 +133,52 @@ def contact_submit():
     subject = request.form.get('subject')
     message = request.form.get('message')
 
-    print("New Contact Message:")
-    print(name, email, subject, message)
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
 
-    return f"Thank you {name}, your message has been sent!"
+    cursor.execute('''
+        INSERT INTO contacts (name, email, message)
+        VALUES (?, ?, ?)
+    ''', (name, email, message))
 
+    conn.commit()
+    conn.close()
+
+    return "Message Sent Successfully!"
+
+
+# @app.route('/contact_submit', methods=['POST'])
+# def contact_submit():
+#     name = request.form.get('name')
+#     email = request.form.get('email')
+#     subject = request.form.get('subject')
+#     message = request.form.get('message')
+
+#     print("New Contact Message:")
+#     print(name, email, subject, message)
+
+#     return f"Thank you {name}, your message has been sent!"
+@app.route('/view_bookings')
+def view_bookings():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM bookings")
+    data = cursor.fetchall()
+
+    conn.close()
+    return str(data)
+
+@app.route('/view_contacts')
+def view_contacts():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM contacts")
+    data = cursor.fetchall()
+
+    conn.close()
+    return str(data)
+
+if __name__ == "__main__":
+    app.run(debug=True)

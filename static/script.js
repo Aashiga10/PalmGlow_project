@@ -1,3 +1,4 @@
+console.log("JS Loaded");
 function filterDesign(category) {
 
     let cards = document.getElementsByClassName("card");
@@ -20,8 +21,11 @@ function calculatePrice() {
     let total = design + length;
 
     if (glitter.checked) {
-        total += parseInt(glitter.value);
+        total += parseInt(glitter.value)||0;
     }
     document.getElementById("totalInput").value = total;
     document.getElementById("total").innerText = total;
+}
+window.onload = function () {
+    calculatePrice();
 }

@@ -54,7 +54,7 @@
 
             <!-- Logo -->
             <h1 class="logo">
-            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}">
                <i class="fa-brands fa-sketch"></i> Palm Glow
             </a>
             </h1>
@@ -300,7 +300,8 @@
     <h2 class="title" style="  font-weight: bolder;">Our Mehndi Services</h2><br><br>
     <div class="card-container">
         <div class="card">
-            <img src="Images/hennapowder.png.png" alt="">
+            <img src="{{ url_for('static', filename='Images/hennapowder.png.png') }}" alt="">
+            
             <div class="card-content">
                 <h3>Henna Powder</h3>
                 <p>The mehndi mixture is made from a ground paste or powder from the leaves of the henna plant. While
@@ -312,7 +313,7 @@
         </div>
 
         <div class="card">
-            <img src="Images/eucalyptus.png.png" alt="">
+            <img src="{{ url_for('static', filename='Images/eucalyptus.png.png') }}" alt="">
             <div class="card-content">
                 <h3>Eucalyptus Oil</h3>
                 <p>Hennahub Pure Eucalyptus Essential Oil is extracted through advanced steam distillation from freshly
@@ -324,7 +325,7 @@
         </div>
 
         <div class="card">
-            <img src=".//Images/teatreeoil.png" alt="">
+            <img src="{{ url_for('static', filename='Images/teatreeoil.png') }}" alt="">
             <div class="card-content">
                 <h3>Tea Tree Oil</h3>
                 <p>Tea tree oil is a popular addition to mehndi (henna) paste to achieve a darker, richer stain by
@@ -387,8 +388,8 @@
         </a>
       </div>
     </div>
-    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
+    <!-- <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script> -->
+<script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
     <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
