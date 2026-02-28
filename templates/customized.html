@@ -125,7 +125,7 @@
 
     </div>
 </div> -->
-<form action="/book" method="POST">
+<form action="/customized" method="POST">
 
 <div class="container my-5">
 
@@ -280,8 +280,17 @@
             </a>
        </div>
     </div>
+
+    <script>
+function test() {
+    alert("JS Working");
+}
+</script>
+
+<button onclick="test()">Click Me</button>
    <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
 
 </body>
 
