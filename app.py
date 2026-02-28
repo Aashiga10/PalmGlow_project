@@ -181,13 +181,16 @@
 #     app.run(debug=True)
 
 from flask import Flask, render_template, request
+import os
 import sqlite3
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, 'database.db')
 
 app = Flask(__name__)
 
 # ------------------ DATABASE INIT ------------------
 def init_db():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     # Booking table
@@ -213,6 +216,8 @@ def init_db():
 
     conn.commit()
     conn.close()
+
+    return "Saved"
 
 
 # ------------------ ROUTES ------------------
