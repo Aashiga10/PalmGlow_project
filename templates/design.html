@@ -80,23 +80,23 @@
 <div class="container text-center my-4">
   <div class="btn-group flex-wrap">
 
-    <button class="btn btn-warning m-1" onclick="filterDesign('all')">
+    <button class="btn btn-warning m-1 filter-btn" data-filter="all" onclick="filterDesign('all')">
       All
     </button>
 
-    <button class="btn btn-outline-warning m-1" onclick="filterDesign('bridal')">
+    <button class="btn btn-outline-warning m-1 filter-btn" data-filter="bridal" onclick="filterDesign('bridal')">
       Bridal
     </button>
 
-    <button class="btn btn-outline-warning m-1" onclick="filterDesign('arabic')">
+    <button class="btn btn-outline-warning m-1 filter-btn" data-filter="arabic" onclick="filterDesign('arabic')">
       Arabic
     </button>
 
-    <button class="btn btn-outline-warning m-1" onclick="filterDesign('traditional')">
+    <button class="btn btn-outline-warning m-1 filter-btn" data-filter="traditional" onclick="filterDesign('traditional')">
       Traditional
     </button>
 
-    <button class="btn btn-outline-warning m-1" onclick="filterDesign('indo')">
+    <button class="btn btn-outline-warning m-1 filter-btn" data-filter="indo" onclick="filterDesign('indo')">
       Indo-Arabic
     </button>
 
@@ -184,6 +184,18 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- Full Image Preview Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-transparent">
+      <div class="modal-body text-center p-2 position-relative">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+        <img id="modalPreviewImg" src="" class="img-fluid rounded-4 shadow-lg" style="max-height: 85vh; object-fit: contain; background: #ffffff; padding: 12px; border: 2px solid goldenrod;">
+      </div>
+    </div>
   </div>
 </div>
 
@@ -387,10 +399,15 @@ Bridal --
         </a>
       </div>
     </div>
+
+    <!-- Floating WhatsApp Support -->
+    <a href="https://wa.me/919047707580?text=Hello%20Palm%20Glow!%20I%20saw%20your%20designs%20and%20would%20like%20to%20inquire%20about%20booking." 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

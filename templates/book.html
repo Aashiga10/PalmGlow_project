@@ -132,6 +132,10 @@
         </center>
     </form> -->
 <form action="/confirm" method="POST" class="container my-5">
+  <input type="hidden" name="length" value="{{ length or '' }}">
+  <input type="hidden" name="glitter" value="{{ glitter or '' }}">
+  <input type="hidden" name="total" value="{{ total or '' }}">
+
   <div class="row justify-content-center">
     <div class="col-md-6">
 
@@ -139,28 +143,34 @@
         💳 Proceed to Booking
       </h2>
 
+      {% if total and total != '0' %}
+      <div class="alert alert-warning text-center fw-bold mb-4 shadow-sm">
+        ✨ Customized Package Selected — Estimated Total: ₹{{ total }}
+      </div>
+      {% endif %}
+
       <!-- Name -->
       <div class="mb-3">
         <label class="form-label fw-semibold" style="color: maroon;">Name</label>
-        <input type="text" name="name" class="form-control" required>
+        <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
       </div>
 
       <!-- Phone -->
       <div class="mb-3">
         <label class="form-label fw-semibold" style="color: maroon;">Phone Number</label>
-        <input type="tel" name="phone" class="form-control" required>
+        <input type="tel" name="phone" class="form-control" placeholder="e.g. +91 9876543210" required>
       </div>
 
       <!-- Email -->
       <div class="mb-3">
         <label class="form-label fw-semibold" style="color: maroon;">Email</label>
-        <input type="email" name="email" class="form-control" required>
+        <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
       </div>
 
       <!-- Address -->
       <div class="mb-3">
         <label class="form-label fw-semibold" style="color: maroon;">Address</label>
-        <input type="text" name="address" class="form-control" required>
+        <input type="text" name="address" class="form-control" placeholder="City, Area, Door No." required>
       </div>
 
       <!-- Date -->
@@ -202,29 +212,29 @@
         <label class="form-label fw-semibold mb-2" style="color: maroon;">Design Preference</label>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="design" value="Bridal" required>
+          <input class="form-check-input" type="radio" name="design" value="Bridal" {% if design == '5000' or design == 'Bridal' %}checked{% endif %} required>
           <label class="form-check-label">Bridal</label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="design" value="Arabic" required>
+          <input class="form-check-input" type="radio" name="design" value="Arabic" {% if design == '2000' or design == 'Arabic' %}checked{% endif %} required>
           <label class="form-check-label">Arabic</label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="design" value="Indo-Arabic" required>
+          <input class="form-check-input" type="radio" name="design" value="Indo-Arabic" {% if design == '2500' or design == 'Indo-Arabic' %}checked{% endif %} required>
           <label class="form-check-label">Indo-Arabic</label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="design" value="Customized" required>
+          <input class="form-check-input" type="radio" name="design" value="Customized" {% if total or design == 'Customized' %}checked{% endif %} required>
           <label class="form-check-label">Customized</label>
         </div>
       </div>
 
       <!-- Submit -->
-      <button type="submit" class="btn text-white" style="background-color: maroon;">
-        Submit
+      <button type="submit" class="btn text-white w-100 py-2 fs-5" style="background-color: maroon;">
+        Confirm Booking
       </button>
 
     </div>
@@ -437,6 +447,13 @@
         </a>
       </div>
     </div>
+
+    <!-- Floating WhatsApp Support -->
+    <a href="https://wa.me/919047707580?text=Hello%20Palm%20Glow!%20I%20have%20a%20question%20about%20booking%20my%20mehndi." 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
     <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script> -->
 </body>

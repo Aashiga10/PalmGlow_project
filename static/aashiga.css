@@ -464,3 +464,30 @@ container .my-5 h2{
         font-size: 20px;
     }
 }
+
+/* Floating WhatsApp Business Button */
+.whatsapp-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #ffffff !important;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.35);
+    color: #ffffff !important;
+}

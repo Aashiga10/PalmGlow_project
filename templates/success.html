@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "Confirmation" }} - Palm Glow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='aashiga.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .confirmation-wrapper {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 15px;
+        }
+        .confirmation-panel {
+            background: #ffffff !important;
+            width: 100% !important;
+            max-width: 620px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+            padding: 45px 35px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .confirmation-panel h2 {
+            color: maroon !important;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 12px;
+        }
+        .confirmation-panel p.lead-msg {
+            color: #495057 !important;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .summary-box {
+            background: #faf8f5 !important;
+            border: 1px solid #ebd9b8 !important;
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e5dfd3;
+            font-size: 0.95rem;
+        }
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+        .summary-label {
+            color: #6c757d;
+            font-weight: 500;
+        }
+        .summary-value {
+            color: #212529;
+            font-weight: 600;
+            text-align: right;
+            word-break: break-word;
+            max-width: 65%;
+        }
+        .action-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .action-btns a {
+            padding: 10px 24px;
+            font-weight: 500;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1 class="logo">
+                    <a href="{{ url_for('home') }}">
+                        <i class="fa-brands fa-sketch"></i> Palm Glow
+                    </a>
+                </h1>
+                <nav class="navbar navbar-expand-lg p-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="{{ url_for('home') }}">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="{{ url_for('design') }}">
+                                    <i class="fa-solid fa-bezier-curve"></i> Designs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="{{ url_for('about') }}">
+                                    <i class="fa-solid fa-circle-info"></i> About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="{{ url_for('contact') }}">
+                                    <i class="fa-solid fa-user"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="confirmation-wrapper">
+        <div class="confirmation-panel">
+            <div>
+                <i class="fa-solid fa-circle-check text-success" style="font-size: 4rem;"></i>
+            </div>
+            <h2>{{ headline }}</h2>
+            <p class="lead-msg">{{ message }}</p>
+
+            {% if details %}
+            <div class="summary-box">
+                <h6 class="fw-bold mb-3 text-dark pb-2 border-bottom">
+                    <i class="fa-solid fa-file-invoice me-2 text-warning"></i> Details Summary
+                </h6>
+                {% for key, val in details.items() %}
+                    {% if val %}
+                    <div class="summary-row">
+                        <span class="summary-label">{{ key }}</span>
+                        <span class="summary-value">{{ val }}</span>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if details and details.get('Customer Name') %}
+            <div class="mb-4">
+                <a href="https://wa.me/919047707580?text=Hello%20Palm%20Glow!%20I%20have%20submitted%20a%20booking%20request%20on%20your%20website.%0AName:%20{{ details.get('Customer Name') }}%0ADate:%20{{ details.get('Appointment Date') }}%0ADesign:%20{{ details.get('Design') }}" 
+                   target="_blank" class="btn btn-success w-100 py-2 fs-6 shadow-sm fw-semibold">
+                    <i class="fa-brands fa-whatsapp fs-5 me-2"></i> Chat with Us on WhatsApp to Confirm
+                </a>
+            </div>
+            {% elif details and details.get('Email') %}
+            <div class="mb-4">
+                <a href="https://wa.me/919047707580?text=Hello%20Palm%20Glow!%20I%20sent%20a%20message%20on%20your%20website%20regarding%20{{ details.get('Subject') }}." 
+                   target="_blank" class="btn btn-success w-100 py-2 fs-6 shadow-sm fw-semibold">
+                    <i class="fa-brands fa-whatsapp fs-5 me-2"></i> Chat with Us on WhatsApp
+                </a>
+            </div>
+            {% endif %}
+
+            <div class="action-btns">
+                <a href="{{ url_for('home') }}" class="btn text-white" style="background-color: maroon;">
+                    <i class="fa-solid fa-house me-1"></i> Back to Home
+                </a>
+                <a href="{{ url_for('design') }}" class="btn btn-outline-dark">
+                    <i class="fa-solid fa-bezier-curve me-1"></i> View More Designs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-flex">
+        <h6 class="footer-text">Copyright © 2025 Palm Glow</h6>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/aashi_mehandi_arts/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/feed/you"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61570065820060"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>

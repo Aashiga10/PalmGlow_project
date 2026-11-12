@@ -281,17 +281,8 @@
        </div>
     </div>
 
-    <script>
-function test() {
-    alert("JS Working");
-}
-</script>
-
-<button onclick="test()">Click Me</button>
-   <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
+    <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
